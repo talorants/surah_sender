@@ -12,7 +12,7 @@ builder.Services.AddSingleton<IUpdateHandler, BotUpdateHandler>();
 builder.Services.AddHostedService<BotBackgroundService>();
 
 var app = builder.Build(); 
-
+app.MapGet("/", () => "Bot is working 🤖");
 app.Run();
 
 
